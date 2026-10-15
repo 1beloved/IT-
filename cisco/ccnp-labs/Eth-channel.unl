@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Eth-channel" version="1" scripttimeout="300" lock="0">
+  <topology>
+    <nodes>
+      <node id="1" name="Switch1" type="qemu" template="viosl2" image="viosl2-2020-cml" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="f7dc9f5e-4e1d-4794-ad18-8e8969416729" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Switch L3.png" config="0" left="286" top="194">
+        <interface id="0" name="Gi0/0" type="ethernet" network_id="1"/>
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="2"/>
+      </node>
+      <node id="2" name="Switch2" type="qemu" template="viosl2" image="viosl2-2020-cml" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="a49a01e9-1a22-4cf0-b5ac-e840a07947c5" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" delay="0" icon="Switch L3.png" config="0" left="624" top="195">
+        <interface id="0" name="Gi0/0" type="ethernet" network_id="1"/>
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="2"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="Net-Switch1iface_0" left="346" top="234" visibility="0"/>
+      <network id="2" type="bridge" name="Net-Switch1iface_1" left="346" top="234" visibility="0"/>
+    </networks>
+  </topology>
+</lab>
